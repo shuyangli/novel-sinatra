@@ -53,9 +53,47 @@ h2.book-title{
 p.book-description{
   line-height: 20px;
 }
+.book-image-container{
+  display: inline-block;
+  position: relative;
+}
 img.book-detail-pic {
-  max-width: 90%;
-  margin-top: 2em;
+  position: absolute;
+  top: 2em;
+  left: 5%;
+  width: 16em;
+  height: 25em;
+  z-index: 1;
+  margin-left: 0em;
+}
+.book-image-container .book-hover-overlay{
+  position: absolute;
+  left: 5%;
+  top: 2em;
+  width: 16em;
+  height: 25em;
+  z-index: 0;
+}
+.book-image-container:hover .book-hover-overlay{
+  background-color: rgba(0,0,0,0.6);
+  display: block;
+  z-index: 2;
+}
+.book-image-container .book-hover-options{
+  text-align: center;
+  position: relative;
+  color: white;
+  vertical-align: middle;
+  z-index: 3;
+}
+.book-image-container .book-hover-options-container{
+  position: absolute;
+  left: 0em;
+  top: 0em;
+  width: 16em;
+  height: 25em;
+  padding-top: 40%;
+  vertical-align: middle;
 }
 div.cart-shelf {
   text-align: right;

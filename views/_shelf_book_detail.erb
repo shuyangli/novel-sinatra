@@ -1,10 +1,14 @@
 <!-- Book detail popup -->
 <div class="js-book-popup-panel book-popup-panel" data-popup-id="<%= popup_id %>"  class="container-fluid book-detail">
 
-  <div class="col-sm-4">
+  <div class="col-sm-4 book-image-container">
     <img src="<%= book["img_url"]%>" class="book-detail-pic">
-    <h4><a>See Back</a></h4>
-    <h4><a>Look Inside</a></h4>
+    <div class="book-hover-overlay">
+      <div class="book-hover-options-container">
+        <a href=''><h3 class="book-hover-options">Look Inside</h3></a>
+        <a href=''><h3 class="book-hover-options">See Back</h3></a>
+      </div>
+    </div>
   </div>
 
   <div class="col-sm-8">
