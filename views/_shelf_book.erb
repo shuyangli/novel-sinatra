@@ -1,0 +1,14 @@
+<div class="col-sm-3">
+
+  <%# sample book %>
+  <% book = book || {
+      "title" => "The Lean Startup",
+      "author" => "Eric Ries",
+      "price" => 16.99,
+      "description" => "Most startups fail. But many of those failures are preventable.  The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new products are launched.",
+      "img_url" => "http://ecx.images-amazon.com/images/I/51vN15YCJyL._SX329_BO1,204,203,200_.jpg"
+    } %>
+
+  <img class="js-book-popup" data-popup-id="<%= popup_id %>" src="<%= book["img_url"] %>" class="book-result" align="bottom">
+
+</div>

@@ -1,0 +1,79 @@
+.dark-brown { color: rgb(34, 10, 8); }
+.light-brown { color: rgb(130, 79, 57); }
+
+body {
+  font-family: "Adobe Garamond Pro";
+  line-height: 1.2em;
+  padding: 2.5%;
+}
+
+a {
+  color: rgb(130, 79, 57);
+}
+a:hover {
+  color: rgb(183, 112, 80);
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 300;
+  font-variant: small-caps;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: rgb(130, 79, 57);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ================
+ * Reset search bar borders and glow
+ * ================ */
+.form-control {
+  border: none;
+}
+.form-control:focus {
+  border: none;
+}
+
+/* ================
+ * Sidebar
+ * ================ */
+#logo {
+  font-size: 3em;
+  font-variant: small-caps;
+  letter-spacing: 8px;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+div.col-sidebar {
+  position: fixed;
+}
+
+div#searchbar-container {
+  position: fixed;
+  width: 69.444444444444%;
+  z-index: 1000;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+}
+
+#searchbar {
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+div.search-group {
+  width: 80%;
+}
+
+div#searchbar-container + div {
+  margin-top: 6em;
+}

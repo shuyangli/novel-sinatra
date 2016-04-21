@@ -1,0 +1,48 @@
+<div class="col-main col-sm-10 col-sm-offset-2">
+  <%= erb :_searchbar %>
+
+  <div id="shelf-title">
+    <h2>
+      <% if defined?(shelf_title) %>
+        <%= shelf_title %>
+      <% else %>
+        shelf title goes here
+      <% end %>
+    </h2>
+  </div>
+
+  <!-- Shelf content -->
+  <div id="shelf-content">
+
+    <% shelf_books = shelf_books || [nil]*12 %>
+    <% shelf_books.each_slice(4).with_index do |books_row, idx_row| %>
+      <!-- each shelf row contains 4 books -->
+      <div class="shelf">
+        <div class="container-fluid shelf-row">
+          <% books_row.each_with_index do |b, idx_b| %>
+            <%= erb :_shelf_book, :locals => { :book => b, :popup_id => current_book_id(idx_row, idx_b, 4) } %>
+          <% end %>
+        </div>
+      <div class="shelf-bottom"></div>
+      </div>
+      <%# book details %>
+      <% books_row.each_with_index do |b, idx_b| %>
+        <%= erb :_shelf_book_detail, :locals => { :book => b, :popup_id => current_book_id(idx_row, idx_b, 4) } %>
+      <% end %>
+
+    <% end %>
+
+    <h3 id="see-more">See More</h3>
+
+  </div>
+
+  <!-- Related shelves -->
+  <div id="related_shelves">
+    <h2>Related Shelves</h2>
+    <% related_shelves = related_shelves || [0]*3 %>
+    <% related_shelves.each do |shelf| %>
+      <%= erb :_shelf_image, :locals => {:shelf => shelf} %>
+    <% end %>
+  </div>
+
+</div>
