@@ -53,6 +53,9 @@ div.col-sidebar {
   position: fixed;
 }
 
+/* ================
+ * Search bar
+ * ================ */
 div#searchbar-container {
   position: fixed;
   width: 69.444444444444%;

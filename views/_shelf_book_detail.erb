@@ -1,35 +1,59 @@
 <!-- Book detail popup -->
 <div class="js-book-popup-panel book-popup-panel" data-popup-id="<%= popup_id %>"  class="container-fluid book-detail">
 
-  <%# sample book %>
-  <% book = book || {
-      "title" => "The Lean Startup",
-      "author" => "Eric Ries",
-      "price" => 16.99,
-      "description" => "Most startups fail. But many of those failures are preventable.  The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new products are launched.",
-      "img_url" => "http://ecx.images-amazon.com/images/I/51vN15YCJyL._SX329_BO1,204,203,200_.jpg"
-    } %>
-
   <div class="col-sm-4">
     <img src="<%= book["img_url"]%>" class="book-detail-pic">
     <h4><a>See Back</a></h4>
     <h4><a>Look Inside</a></h4>
   </div>
 
-  <div class="col-sm-5">
-    <h2><%= book["title"] %></h2>
-    <h4><%= book["author"] %></h4>
-    <h4>$<%= book["price"] %></h4>
-    <p><%= book["description"] %></p>
-    <h4>Reviews</h4>
-    <h4>Related Books</h4>
-    <h4>Related Shelves:</h4>
-    <h5 class="related-shelves"><a>Advice Columns</a></h5>
-    <h5 class="related-shelves"><a>Motivational Bestsellers</a></h5>
+  <div class="col-sm-8">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 class='book-title'><%= book["title"] %></h2>
+        <h4><%= book["author"] %></h4>
+        <h4>$<%= book["price"] %></h4>
+      </div>
+
+      <div class="col-sm-4 cart-shelf">
+        <a href=''><div class='cart-button'>
+          <h5 class='cart-button-text'><i class="fa fa-shopping-cart fa-lg"></i> Add to Cart</h5>
+        </div></a>
+        <a href=''><div class='shelf-button'>
+          <h5 class='cart-button-text'><i class="fa fa-list fa-lg"></i> Add to My Shelf</h5>
+        </div></a>
+      </div>
+    </div>
+    <div><p class="book-description"><%= book["description"] %></p></div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <h4>Related Books</h4>
+        <div class="container-fluid result-row-mini">
+          <!-- search result container -->
+          <div class="img-container">
+            <div class="col-sm-6 book-result-mini-col"><img src="./images/getting_things_done.jpg" class="book-result-mini" align="bottom"></div>
+            <div class="col-sm-6 book-result-mini-col"><img src="./images/hamlet.jpg" class="book-result-mini"></div>
+          </div>
+          <div class="result-bottom-mini"></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <h4>Related Shelves</h4>
+        <a href="shelf.html"><div class="shelf-mini">
+          <img class="shelf-img-mini" src="images/shelf.png">
+          <div class="shelf-bottom-mini"></div>
+          <h4 class="shelf-label-mini">oprah's bookshelf</h4>
+        </div></a>
+
+        <a href="shelf.html"><div class="shelf-mini">
+          <img class="shelf-img-mini" src="images/shelf.png">
+          <div class="shelf-bottom-mini"></div>
+          <h4 class="shelf-label-mini">oprah's bookshelf</h4>
+        </div></a>
+      </div>
+    </div>
   </div>
 
-  <div class="col-sm-3" id='cart-shelf'>
-    <h4>+ Cart</h4>
-    <h4>+ My Shelf</h4>
-  </div>
 </div>

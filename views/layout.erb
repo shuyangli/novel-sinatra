@@ -10,6 +10,9 @@
     <!--jQuery (required by Bootstrap) -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -24,7 +27,7 @@
   </head>
 
   <body>
-  <div class="container">
+  <div class="container-fluid">
     <%= erb :_sidebar %> <%# sidebar takes up 2 columns %>
     <%= yield %>
   </div>
