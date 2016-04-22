@@ -1,25 +1,25 @@
+/* ================
+ * Shelf picture and layout
+ * ================ */
 div.shelf {
   width: 80%;
   margin-top: 3em;
 }
-
 h4.shelf-label{
   margin-top: 0.25em;
   font-variant: small-caps;
   letter-spacing: 3px;
+  text-transform: lowercase;
 }
-
 img.shelf-img {
   margin-left: 5%;
   width: 90%;
   vertical-align: bottom;
 }
-
 div.shelf-row {
   display: flex;
   align-items: flex-end;
 }
-
 div.shelf-bottom {
   display: block;
   width: 100%;
@@ -28,17 +28,23 @@ div.shelf-bottom {
   box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.2);
 }
 
+
+/* ================
+ * Result rows
+ * ================ */
 img.book-result {
   box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
 h4.see-more {
   width: 80%;
   margin-top: 2em;
   text-align: right;
 }
 
+/* ================
+ * Book detail panel: basic stuff
+ * ================ */
 div.book-popup-panel {
   height: 35em;
   width: 80%;
@@ -53,6 +59,10 @@ h2.book-title{
 p.book-description{
   line-height: 20px;
 }
+
+/* ================
+ * Book detail panel: main book image
+ * ================ */
 .book-image-container{
   display: inline-block;
   position: relative;
@@ -95,11 +105,32 @@ img.book-detail-pic {
   padding-top: 40%;
   vertical-align: middle;
 }
+
+/* ================
+ * Book detail panel: buttons
+ * ================ */
 div.cart-shelf {
   text-align: right;
   margin-top: 2em;
 }
+.cart-button{
+  background-color: #CCB7AE;
+  padding: 0.1em;
+  padding-left: 0.8em;
+  text-align: left;
+  margin-bottom: 1em;
+}
+.shelf-button{
+  background-color: #CCB7AE;
+  padding: 0.1em;
+  padding-left: 0.8em;
+  text-align: left;
+  margin-bottom: 1em;
+}
 
+/* ================
+ * Book detail panel: related books
+ * ================ */
 div.result-row-mini{
   margin: auto;
   vertical-align: bottom;
@@ -123,6 +154,10 @@ div.book-result-mini{
 .book-result-mini-col{
   padding-left: 0.5em;
 }
+
+/* ================
+ * Book detail panel: related shelves
+ * ================ */
 h4.shelf-label-mini{
   margin-top: 0.25em;
   font-variant: small-caps;
@@ -144,18 +179,3 @@ div.shelf-mini {
   margin-top: 0em;
 }
 
-.cart-button{
-  background-color: #CCB7AE;
-  padding: 0.1em;
-  padding-left: 0.8em;
-  text-align: left;
-  margin-bottom: 1em;
-}
-
-.shelf-button{
-  background-color: #CCB7AE;
-  padding: 0.1em;
-  padding-left: 0.8em;
-  text-align: left;
-  margin-bottom: 1em;
-}
