@@ -125,9 +125,9 @@ img.book-detail-pic {
  * ================ */
  img.page-corner{
   position: absolute;
-  width: 3em;
-  top: 24.2em;
-  left: 14.8em;
+  width: 3.5em;
+  top: 23.5em;
+  left: 14.4em;
   z-index: 2;
  }
 
