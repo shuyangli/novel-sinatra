@@ -6,7 +6,6 @@ require_relative 'view_helpers'
 class NovelApp < Sinatra::Base
 
   helpers ViewHelpers
-  helpers AmazonHelpers
 
   get '/' do
     @book_data ||= JSON.parse(File.read("public/data/book_data.json"))
