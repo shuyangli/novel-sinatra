@@ -107,6 +107,17 @@ img.book-detail-pic {
 /* ================
  * Book detail panel: reviews
  * ================ */
+ img.page-corner{
+  position: absolute;
+  width: 3em;
+  top: 24.2em;
+  left: 14.8em;
+  z-index: 2;
+ }
+
+/* ================
+ * Book detail panel: reviews
+ * ================ */
  div.ratings{
   position: absolute;
   left: 10%;
