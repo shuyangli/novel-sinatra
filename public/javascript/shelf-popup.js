@@ -16,4 +16,8 @@ $(document).ready(function () {
       popup_panel.hide();
     }
   });
+
+  $(".exit-button").on("click", function () {
+    $(".js-book-popup-panel").hide();
+  });
 });
