@@ -83,7 +83,7 @@ img.book-detail-pic {
   height: 25em;
   z-index: 0;
 }
-.book-image-container:hover .book-hover-overlay{
+.book-image-only:hover .book-hover-overlay{
   background-color: rgba(0,0,0,0.6);
   display: block;
   z-index: 2;
