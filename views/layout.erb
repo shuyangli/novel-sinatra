@@ -24,6 +24,32 @@
     <!-- Javascript -->
     <script src="<%= url("/javascript/shelf-popup.js") %>"></script>
 
+    <script>
+      $(document).ready(function () {
+        $(".js-book-popup-panel").hide();
+        $(".js-book-popup").on("click", function () {
+          var popup_id = $(this).data("popup-id");
+          var popup_panel = panel_with_id(popup_id);
+          if (popup_panel.is(":hidden")) {
+            $(".js-book-popup-panel").hide();
+            popup_panel.show();
+          } else {
+            popup_panel.hide();
+          }
+        });
+        $(".exit-button").on("click", function () {
+          $(".js-book-popup-panel").hide();
+        });
+
+        <% if @book_id %>
+          panel_with_id(<%= @book_id %>).show();
+          $("html, body").animate({
+            scrollTop: image_with_id(<%= @book_id %>).offset().top
+          }, 500);
+        <% end %>
+      });
+    </script>
+
   </head>
 
   <body>

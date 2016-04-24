@@ -12,10 +12,11 @@ class NovelApp < Sinatra::Base
     erb :index
   end
 
-  get '/shelf/:shelf_id' do
+  get '/shelf/:shelf_id/?:book_id?' do
     @book_data ||= JSON.parse(File.read("public/data/book_data.json"))
 
     @shelf_id = params["shelf_id"]
+    @book_id = params["book_id"] if params["book_id"]
     @shelf_books = @book_data[params["shelf_id"]]
     erb :shelf
   end
