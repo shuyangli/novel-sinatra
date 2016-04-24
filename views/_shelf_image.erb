@@ -1,6 +1,17 @@
 <a href="/shelf/<%= shelf_id %>">
   <div class="shelf">
-    <img class="shelf-img" src="images/shelf.png">
+    <div class="shelf-img-wrapper">
+      <% shelf_img_idx = [1, 2, 3, 4].shuffle %>
+      <% books_idx = rand(books.length) %>
+      <img class="shelf-filler-img" src="images/shelf-<%= shelf_img_idx[0] %>.png">
+      <img class="shelf-book-img"  src="<%= books_shuffled[0]["img_url"] %>">
+      <img class="shelf-filler-img" src="images/shelf-<%= shelf_img_idx[1] %>.png">
+      <img class="shelf-book-img"  src="<%= books_shuffled[1]["img_url"] %>">
+      <img class="shelf-filler-img" src="images/shelf-<%= shelf_img_idx[2] %>.png">
+      <img class="shelf-book-img"  src="<%= books_shuffled[2]["img_url"] %>">
+      <img class="shelf-filler-img" src="images/shelf-<%= shelf_img_idx[3] %>.png">
+    </div>
+    <!-- <img class="shelf-img" src="images/shelf.png"> -->
     <div class="shelf-bottom"></div>
     <h4 class="shelf-label"><%= shelf_id %></h4>
   </div>

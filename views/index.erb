@@ -3,7 +3,7 @@
 
   <div>
   <% @book_data.each do |shelf_id, books| %>
-    <%= erb :_shelf_image, :locals => { :shelf_id => shelf_id } %>
+    <%= erb :_shelf_image, :locals => { :shelf_id => shelf_id, :books => books } %>
   <% end %>
   </div>
 </div>
