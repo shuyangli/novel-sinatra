@@ -40,14 +40,14 @@ div.shelf-bottom {
   display: block;
   width: 100%;
   height: 1.5em;
-  color: blue;
+  background-color: white;
   box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.2);
 }
 
 /* ================
  * Result rows
  * ================ */
-img.book-result {
+div.shelf-row img {
   box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -168,53 +168,13 @@ div.exit-button{
 }
 
 /* ================
- * Book detail panel: related books
+ * Book detail panel: related books and shelves
  * ================ */
-div.result-row-mini{
-  margin: auto;
-  vertical-align: bottom;
-  padding:0em;
-}
-
-div.result-bottom-mini {
-  display: block;
+div.shelf-mini > div.shelf {
   width: 100%;
-  height: 1.5em;
-  background-color: white;
-  opacity: 1;
-  box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.2);
-  z-index: 200;
-}
-
-div.book-result-mini-col {
-  padding-left: 0.5em;
-}
-div.book-result-mini-col img.shelf-book-img {
-  box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* ================
- * Book detail panel: related shelves
- * ================ */
-h4.shelf-label-mini{
   margin-top: 0.25em;
-  font-variant: small-caps;
-  letter-spacing: 3px;
-}
-.shelf-img-mini {
-  width: 100%;
-  vertical-align: bottom;
-}
-div.shelf-bottom-mini {
-  display: block;
-  width: 100%;
-  height: 1.5em;
-  background-color: white;
-  box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.2);
-}
-div.shelf-mini {
-  width: 100%;
-  margin-top: 0em;
 }
 
+div.shelf-mini div.shelf-bottom {
+  height: 1.2em;
+}

@@ -42,10 +42,9 @@
     <div><p class="book-description"><%= book["description"] %></p></div>
 
     <div class="row container-related">
-      <div class="col-sm-6">
+      <div class="col-sm-6 shelf-mini">
         <h4>Related Books</h4>
-
-        <div class="container-fluid result-row-mini">
+        <div class="container-fluid shelf-row">
           <div class="shelf-row">
             <% book["related"] ||= [
                 # fake default value
@@ -53,28 +52,20 @@
                 {"shelf" => "Tech Startups", "book_idx" => 1}
               ] %>
             <% book["related"].each do |r| %>
-              <div class="col-sm-6 book-result-mini-col">
+              <div class="col-sm-6">
                 <%= erb :_book_image_link, :locals => { :shelf_id => r["shelf"], :book_id => r["book_idx"], :img_url => @book_data[r["shelf"]][r["book_idx"]]["img_url"] } %>
               </div>
             <% end %>
           </div>
         </div>
-        <div class="result-bottom-mini"></div>
+        <div class="shelf-bottom"></div>
       </div>
 
-      <div class="col-sm-6">
+      <div class="col-sm-6 shelf-mini">
         <h4>Related Shelves</h4>
-        <a href="shelf.html"><div class="shelf-mini">
-          <img class="shelf-img-mini" src="images/shelf.png">
-          <div class="shelf-bottom-mini"></div>
-          <h4 class="shelf-label-mini">oprah's bookshelf</h4>
-        </div></a>
-
-        <a href="shelf.html"><div class="shelf-mini">
-          <img class="shelf-img-mini" src="images/shelf.png">
-          <div class="shelf-bottom-mini"></div>
-          <h4 class="shelf-label-mini">oprah's bookshelf</h4>
-        </div></a>
+        <% book["related"].map { |x| x["shelf"] }.each do |related_shelf| %>
+          <%= erb :_shelf_image, :locals => { :shelf_id => related_shelf, :books => @book_data[related_shelf] } %>
+        <% end %>
       </div>
     </div>
   </div>
