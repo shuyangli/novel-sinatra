@@ -58,7 +58,7 @@ div.col-sidebar {
  * ================ */
 div#searchbar-container {
   position: fixed;
-  width: 69.444444444444%;
+  width: 60%;
   z-index: 1000;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.7);
