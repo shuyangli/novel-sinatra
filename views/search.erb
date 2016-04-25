@@ -1,0 +1,39 @@
+<div class="col-main col-sm-10 col-sm-offset-2">
+  <%= erb :_searchbar %>
+
+  <div id="shelf-title">
+    <h2>12 results for "<%= @search_term %>"</h2>
+  </div>
+
+  <!-- Shelf content -->
+  <div id="shelf-content">
+    <% @shelf_books.each_slice(4).with_index do |books_row, idx_row| %>
+      <!-- each shelf row contains 4 books -->
+      <div class="shelf">
+        <div class="container-fluid shelf-row">
+          <% books_row.each_with_index do |b, idx_b| %>
+            <%= erb :_shelf_book, :locals => { :book => b, :popup_id => current_book_id(idx_row, idx_b, 4) } %>
+          <% end %>
+        </div>
+      <div class="shelf-bottom"></div>
+      </div>
+      <%# book details %>
+      <% books_row.each_with_index do |b, idx_b| %>
+        <%= erb :_shelf_book_detail, :locals => { :book => b, :popup_id => current_book_id(idx_row, idx_b, 4) } %>
+      <% end %>
+
+    <% end %>
+
+    <h4 class="see-more">See More</h3>
+
+  </div>
+
+  <!-- Related shelves -->
+  <!-- <div id="related_shelves">
+    <h2>Related Shelves</h2>
+    <%# related_shelves.each do |shelf_id| %>
+      <%#= erb :_shelf_image, :locals => {:shelf_id => shelf_id} %>
+    <#% end %>
+  </div -->
+
+</div>

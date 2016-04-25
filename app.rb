@@ -21,4 +21,13 @@ class NovelApp < Sinatra::Base
     erb :shelf
   end
 
+  post '/search' do
+    @book_data ||= JSON.parse(File.read("public/data/book_data.json"))
+
+    @search_term = params["search_term"]
+    @shelf_id = "Tech Startups"
+    @shelf_books = @book_data[@shelf_id]
+    erb :search
+  end
+
 end
