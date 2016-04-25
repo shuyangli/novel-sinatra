@@ -63,7 +63,7 @@
 
       <div class="col-sm-6 shelf-mini">
         <h4>Related Shelves</h4>
-        <% book["related"].map { |x| x["shelf"] }.each do |related_shelf| %>
+        <% book["related"].map { |x| x["shelf"] }.uniq.each do |related_shelf| %>
           <%= erb :_shelf_image, :locals => { :shelf_id => related_shelf, :books => @book_data[related_shelf] } %>
         <% end %>
       </div>

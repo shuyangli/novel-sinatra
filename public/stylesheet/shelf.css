@@ -20,12 +20,6 @@ div.shelf-img-wrapper {
   display: flex;
   align-items: flex-end;
 }
-div.shelf-img-wrapper > img.shelf-filler-img {
-  max-width: 16%;
-}
-div.shelf-img-wrapper > img.shelf-book-img {
-  max-width: calc((100% - (16% * 4)) / 3);
-}
 
 img.shelf-img {
   margin-left: 5%;
