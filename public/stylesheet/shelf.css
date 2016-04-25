@@ -61,7 +61,7 @@ h4.see-more {
  * Book detail panel: basic stuff
  * ================ */
 div.book-popup-panel {
-  height: 35em;
+  height: 38em;
   width: 80%;
   background-color: rgba(0,0,0,0.1);
   margin-left:0em;
@@ -175,6 +175,7 @@ div.result-row-mini{
   vertical-align: bottom;
   padding:0em;
 }
+
 div.result-bottom-mini {
   display: block;
   width: 100%;
@@ -184,14 +185,13 @@ div.result-bottom-mini {
   box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.2);
   z-index: 200;
 }
-div.book-result-mini{
-  max-width: 100%;
-  margin-top: 0em;
-  box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.book-result-mini-col{
+
+div.book-result-mini-col {
   padding-left: 0.5em;
+}
+div.book-result-mini-col img.shelf-book-img {
+  box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 /* ================

@@ -41,17 +41,25 @@
 
     <div><p class="book-description"><%= book["description"] %></p></div>
 
-    <div class="row">
+    <div class="row container-related">
       <div class="col-sm-6">
         <h4>Related Books</h4>
+
         <div class="container-fluid result-row-mini">
-          <!-- search result container -->
-          <div class="img-container">
-            <div class="col-sm-6 book-result-mini-col"><img src="./images/getting_things_done.jpg" class="book-result-mini" align="bottom"></div>
-            <div class="col-sm-6 book-result-mini-col"><img src="./images/hamlet.jpg" class="book-result-mini"></div>
+          <div class="shelf-row">
+            <% book["related"] ||= [
+                # fake default value
+                {"shelf" => "Tech Startups", "book_idx" => 0},
+                {"shelf" => "Tech Startups", "book_idx" => 1}
+              ] %>
+            <% book["related"].each do |r| %>
+              <div class="col-sm-6 book-result-mini-col">
+                <%= erb :_book_image_link, :locals => { :shelf_id => r["shelf"], :book_id => r["book_idx"], :img_url => @book_data[r["shelf"]][r["book_idx"]]["img_url"] } %>
+              </div>
+            <% end %>
           </div>
-          <div class="result-bottom-mini"></div>
         </div>
+        <div class="result-bottom-mini"></div>
       </div>
 
       <div class="col-sm-6">

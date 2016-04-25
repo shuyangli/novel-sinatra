@@ -7,11 +7,11 @@
       <% books_idx << rand_idx unless books_idx.include?(rand_idx) %>
     <% end %>
     <a href="/shelf/<%= shelf_id %>"><img class="shelf-filler-img" src="images/shelf-<%= shelf_img_idx[0] %>.png"></a>
-    <a href="/shelf/<%= shelf_id %>/<%= books_idx[0] %>"><img class="shelf-book-img" src="<%= books[books_idx[0]]["img_url"] %>"></a>
+    <%= erb :_book_image_link, :locals => { :shelf_id => shelf_id, :book_id => books_idx[0], :img_url => books[books_idx[0]]["img_url"] } %>
     <a href="/shelf/<%= shelf_id %>"><img class="shelf-filler-img" src="images/shelf-<%= shelf_img_idx[1] %>.png"></a>
-    <a href="/shelf/<%= shelf_id %>/<%= books_idx[1] %>"><img class="shelf-book-img" src="<%= books[books_idx[1]]["img_url"] %>"></a>
+    <%= erb :_book_image_link, :locals => { :shelf_id => shelf_id, :book_id => books_idx[1], :img_url => books[books_idx[1]]["img_url"] } %>
     <a href="/shelf/<%= shelf_id %>"><img class="shelf-filler-img" src="images/shelf-<%= shelf_img_idx[2] %>.png"></a>
-    <a href="/shelf/<%= shelf_id %>/<%= books_idx[2] %>"><img class="shelf-book-img" src="<%= books[books_idx[2]]["img_url"] %>"></a>
+    <%= erb :_book_image_link, :locals => { :shelf_id => shelf_id, :book_id => books_idx[2], :img_url => books[books_idx[2]]["img_url"] } %>
     <a href="/shelf/<%= shelf_id %>"><img class="shelf-filler-img" src="images/shelf-<%= shelf_img_idx[3] %>.png"></a>
   </div>
   <!-- <img class="shelf-img" src="images/shelf.png"> -->
