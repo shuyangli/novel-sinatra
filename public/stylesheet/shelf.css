@@ -55,7 +55,7 @@ h4.see-more {
  * Book detail panel: basic stuff
  * ================ */
 div.book-popup-panel {
-  height: 38em;
+  overflow: auto;
   width: 80%;
   background-color: rgba(0,0,0,0.1);
   margin-left:0em;
