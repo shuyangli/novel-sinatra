@@ -115,7 +115,7 @@ img.book-detail-pic {
 }
 
 /* ================
- * Book detail panel: reviews
+ * Book detail panel: page corner
  * ================ */
  img.page-corner{
   position: absolute;
@@ -170,5 +170,5 @@ div.shelf-mini > div.shelf {
 }
 
 div.shelf-mini div.shelf-bottom {
-  height: 1.2em;
+  height: .8em;
 }
